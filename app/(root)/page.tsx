@@ -1,9 +1,24 @@
 import HeaderBox from "@/components/HeaderBox";
+import RightSidebar from "@/components/RightSidebar";
 import TotalBalanceBox from "@/components/TotalBalanceBox";
 import React from "react";
 
 const Home = () => {
-  const loggedIn = { firstName: "Geeth" };
+  const loggedIn = {
+    firstName: "Geeth",
+    lastName: "Dew",
+    $id: "1",
+    email: "Geeth@abc.com",
+    userId: "1",
+    dwollaCustomerUrl: "string",
+    dwollaCustomerId: "string",
+    address1: "string",
+    city: "string",
+    state: "string",
+    postalCode: "string",
+    dateOfBirth: "string",
+    ssn: "string",
+  };
   return (
     <section className="home">
       <div className="home-content">
@@ -21,6 +36,7 @@ const Home = () => {
           />
         </header>
       </div>
+      <RightSidebar user={loggedIn} transactions={[]} banks={[]} />
     </section>
   );
 };
